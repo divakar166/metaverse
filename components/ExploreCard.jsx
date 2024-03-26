@@ -1,14 +1,14 @@
 'use client';
 
-import { motion } from "framer-motion";
-import styles from "../styles";
-import { fadeIn } from "../utils/motion";
+import { motion } from 'framer-motion';
+import styles from '../styles';
+import { fadeIn } from '../utils/motion';
 
-const ExploreCard = ({id, imgUrl, title, index, active, handleClick}) => (
+const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
   <motion.div
-    variants={fadeIn('right','spring',index*0.5,0.75)}
+    variants={ fadeIn('right', 'spring', index * 0.5,0.75) }
     className={`relative ${active === id ? 'lg:flex-[3.5] flex-[10]' : 'lg:flex-[0.5] flex-[2] '} flex items-center justify-center min-w-[170px] h-[700px] transition-[flex] duration-[0.7s] ease-out-flex cursor-pointer `}
-    onClick={()=>handleClick(id)}
+    onClick={() => handleClick(id)}
   >
     <img
       src={imgUrl}
@@ -28,10 +28,10 @@ const ExploreCard = ({id, imgUrl, title, index, active, handleClick}) => (
             className="w-1/2 h-1/2 object-contain"
           />
         </div>
-        <p className="font-normal text-[16px] loading-[20px] text-white uppercase" >
+        <p className="font-normal text-[16px] loading-[20px] text-white uppercase">
           Enter the metaverse
         </p>
-        <h2 className="font-semibold mt-[24px] sm:text-[32px] text-[24px] text-white ">
+        <h2 className="font-semibold mt-[24px] sm:text-[32px] text-[24px] text-white">
           {title}
         </h2>
       </div>
